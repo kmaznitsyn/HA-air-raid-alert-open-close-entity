@@ -1,0 +1,29 @@
+{
+  "name": "Hello world java add-on",
+  "description": "Java first add-on",
+  "version": "1.0.5",
+  "slug": "java_hello_world",
+  "init": false,
+  "arch": [
+    "aarch64",
+    "amd64",
+    "armhf",
+    "armv7",
+    "i386"
+  ],
+  "startup": "application",
+  "boot": "auto",
+  "options": {
+    "read_sensor": "weather.home",
+    "write_sensor": "weather.reversed",
+    "poll_interval": 5,
+    "region_id": 5
+  },
+  "schema": {
+    "read_sensor": "str",
+    "write_sensor": "str",
+    "poll_interval": "int(1,30)",
+    "region_id": "int(1,30)"
+  },
+  "homeassistant_api": true
+}
